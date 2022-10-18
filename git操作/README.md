@@ -8,6 +8,12 @@
 6. git commit 可以将暂存区里更新后的代码更新到本地git
 7. git push origin xxx 将本地的xxxgit分支上传至github上的git
 -----------------------------------------------------------
+## 创建 SSH Key
+在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有`id_rsa`和`id_rsa.pub`这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+```bash
+$ ssh-keygen -t rsa -C "youremail@example.com"
+```
+-----------------------------------------------------------
 ## （如果在写自己的代码过程中发现远端GitHub上代码出现改变）
 1. git checkout main 切换回main分支
 2. git pull origin master(main) 将远端修改过的代码再更新到本地
